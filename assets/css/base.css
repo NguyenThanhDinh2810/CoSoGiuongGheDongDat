@@ -3,11 +3,12 @@
   --white-color: #fff;
   --black-color: #000;
   --text-color: #333;
+  --boder-color: #dbdbdb;
 }
 
 * {
   /*inherit ~ kế thừa*/
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -59,8 +60,44 @@ html {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modal__body {
-  background-color: var(--white-color);
-  border-radius: 5px;
   margin: auto;
   z-index: 1;
 }
+
+/*Button style*/
+.btn {
+  min-width: 142px;
+  height: 34px;
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  padding: 0 12px;
+  cursor: pointer;
+  background-color: var(--white-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2rem;
+}
+
+.btn.btn--normal:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.btn.btn--main {
+  color: var(--white-color);
+  background-color: var(--main-color);
+} /*bắt buộc phải có 2 class cùng lúc mới xài được style này*/
+
+.btn.btn--size-s {
+  height: 32px;
+  font-size: 12px;
+  padding: 0 8px;
+}
+.btn.btn--disabled {
+  color: #949494;
+  cursor: default;
+  background-color: #c3c3c3;
+} /*vô hiệu hóa nút sau khi hành động*/

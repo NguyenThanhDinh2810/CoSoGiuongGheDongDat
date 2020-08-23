@@ -16,13 +16,15 @@
       rel="stylesheet"
       href="/assets/font/fontawesome-free-5.14.0-web/css/all.min.css"
     />
-    <link rel="stylesheet" href="/assets/css/base.css" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
   <body>
+    <!--HEADER-->
     <header class="header">
       <div class="grid">
+        <!--navigation bar-->
         <nav class="header__navbar">
           <!--left-->
           <ul class="header__navbar-list">
@@ -34,28 +36,27 @@
               <div class="header__qr">
                 <img
                   class="header__qr-img"
-                  src="./assets/img/demo.png"
+                  src="assets/img/demo.png"
                   alt="QR Code"
                 />
                 <div class="header_qr-apps">
                   <a class="header__qr-link" href="">
                     <img
                       class="header__qr-dowload-img"
-                      src="./assets/img/GooglePlay.png"
+                      src="assets/img/GooglePlay.png"
                       alt="Google Play"
                     />
                   </a>
                   <a class="header__qr-link" href="">
                     <img
                       class="header__qr-dowload-img"
-                      src="./assets/img/AppStore.png"
+                      src="assets/img/AppStore.png"
                       alt="App Store"
                     />
                   </a>
                 </div>
               </div>
             </li>
-
             <li class="header__navbar-item">
               <span class="header__navbar-tittle--no-pointer">Kết nối</span>
               <a href="" class="header__navbar-icon-link">
@@ -133,55 +134,111 @@
         </nav>
       </div>
     </header>
+    <!--MAIN BODY-->
     <div class="container"></div>
+    <!--FOOTER-->
     <footer class="footer"></footer>
     <!--MODAL LAYOUT-->
-    <div class="modal">
-      <div class="modal__overlay">
-
-      </div>
+    <!--xóa style nếu có javascript-->
+    <div class="modal" style="display: none;">
+      <div class="modal__overlay"></div>
       <div class="modal__body">
-          <div class="modal__inner">
-            <!--Authen form-->
-            <div class="auth-forms">
-              <div class="auth-form__heading">
-                <h3 class="auth-form__heading">Đăng ký</h3>
+          <!--REGISTER FORM-->
+            <div class="auth-form"> 
+              <div class="auth-form__container">
+                <!--author header-->
+                <div class="auth-form__header">
+                  <h3 class="auth-form__heading">Đăng ký</h3>
                   <span class="auth-form__switch-btn">Đăng Nhập</span>
-                  <div>
-                    <div class="auth-form__form">
-                      <div class="auth-form__group">
-                        <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
-                      </div>
-                      <div class="auth-form__group">
-                        <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
-                      </div>
-                      <div class="auth-form__group">
-                        <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
-                      </div>
-                    </div>
-                    <div class="auth-form__aside">
-                      <p class="auth-form__policy-text">
-                        Bằng việc đăng ký,bạn đã đồng ý với chúng tôi về
-                        <a href="" class="auth-form__policy-link">Điều khoản dịch vụ</a>&
-                        <a href="" class="auth-form__policy-link">Chính sách bảo mật</a>
-                      </p>
-                    </div>
-                    <div class="auth-form__controls">
-                      <button class="btn">TRỞ LẠI</button>
-                      <button class="btn btn-main">ĐĂNG KÝ</button>
-                    </div>
-                    <div class="auth-form__socials">
-                      <a href="" class="btn btn--with-icon">
-                        <i class="fab fa-facebook-square"></i>
-                        Kết nối với Facebook
-                      </a>
-                      <a href="" class="btn btn--with-icon">
-                        <i class="fab fa-google"></i>
-                        Kết nối với Google
-                      </a>
-                    </div>
+                </div>
+              <!--author form-->
+              <div class="auth-form__form">
+                  <div class="auth-form__group">
+                    <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                  </div>
+                  <div class="auth-form__group">
+                    <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                  </div>
+                  <div class="auth-form__group">
+                    <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
                   </div>
               </div>
+              <!--author policy-->
+              <div class="auth-form__aside">
+                <p class="auth-form__policy-text">
+                  Bằng việc đăng ký,bạn đã đồng ý với chúng tôi về
+                  <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a>&
+                  <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
+                </p>
+              </div>
+              <!--author control button-->
+              <div class="auth-form__controls">
+                <button class="btn btn--normal auth-form__controls--back">TRỞ LẠI</button>
+                <button class="btn btn--main">ĐĂNG KÝ</button>
+              </div>
+            </div>
+            <!--author social connect-->
+            <div class="auth-form__socials">
+              <a href="" class=" auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                <span class="auth-form__socials-tittle">
+                  Kết nối với Facebook
+                </span>
+              </a>
+              <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                <i class="fab fa-google auth-form__socials-icon"></i>
+                <span class="auth-form__socials-tittle">
+                  Kết nối với Google
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!--LOGIN FORM-->
+          <div class="auth-form">
+            <div class="auth-form__container">
+              <!--author header-->
+              <div class="auth-form__header">
+                <h3 class="auth-form__heading">Đăng Nhập<h3>
+                <span class="auth-form__switch-btn">Đăng Ký</span>
+              </div>
+              <!--author form-->
+              <div class="auth-form__form">
+                  <div class="auth-form__group">
+                    <input type="text" class="auth-form__input" placeholder="Nhập email của bạn">
+                  </div>
+                  <div class="auth-form__group">
+                    <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                  </div>
+              </div>
+              <!--author policy-->
+              <div class="auth-form__aside">
+                <div class="auth-form__help">
+                  <a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+                  <span class="auth-form__separate"></span>
+                  <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+                </div>
+              </div>
+              <!--author control button-->
+              <div class="auth-form__controls">
+                <button class="btn btn--normal auth-form__controls--back">TRỞ LẠI</button>
+                <button class="btn btn--main">ĐĂNG NHẬP</button>
+              </div>
+            </div>
+            <!--author social connect-->
+            <div class="auth-form__socials">
+              <a href="" class=" auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                <span class="auth-form__socials-tittle">
+                  Kết nối với Facebook
+                </span>
+              </a>
+              <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                <i class="fab fa-google auth-form__socials-icon"></i>
+                <span class="auth-form__socials-tittle">
+                  Kết nối với Google
+                </span>
+              </a>
             </div>
           </div>
       </div>
