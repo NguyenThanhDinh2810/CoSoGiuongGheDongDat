@@ -15,7 +15,7 @@
     />
     <link
       rel="stylesheet"
-      href="assets/font/fontawesome-free-5.14.0-web/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -127,14 +127,14 @@
             <li
               class="header__navbar-item header__navbar-item--strong header__navbar-item--separate"
             >
-              Đăng kí
+              Đăng ký
             </li>
             <li class="header__navbar-item header__navbar-item--strong">
               Đăng nhập
             </li>
           </ul>
         </nav>
-        <!--header searach-->
+        <!--header search-->
         <div class="header-with-seach">
           <div class="header__logo">
             <svg class="header__logo-img" viewBox="0 0 192 65">
@@ -143,18 +143,63 @@
               </g>
             </svg>
           </div>
-
+          <!--search-->
           <div class="header__search">
-            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
-            <div class="header__search-selection">
-              <span class="header__search-selection-label">Trong shop</span>
-              <i class="fas fa-angle-down"></i>
+            <div class="header__search-input-wrap">
+              <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+              <div class="header__search-history">
+                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                <ul class="header__search-history-list">
+                  <li class="header__search-history-item">
+                    <a href="">Kem dưỡng da</a>
+                  </li>
+                  <li class="header__search-history-item">
+                    <a href="">Kem trị mụn</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
+            
+            <div class="header__search-select">
+              <span class="header__search-select-label">Trong shop</span>
+              <i class="header__search-select-icon fas fa-angle-down"></i>
 
-          <div class="header__cart">
-            <i class="header__cart-icon fas fa-shopping-cart"></i>
+              <ul class="header__search-option">
+                <li class="header__search-option-item header__search-option-item--active">
+                  <span>Trong shop</span>
+                  <i class="fas fa-check"></i>
+                </li>
+                <li class="header__search-option-item">
+                  <span>Ngoài shop</span>
+                  <i class="fas fa-check"></i>
+                </li>
+              </ul>
+
+            </div>
+    
+            <button class="header__search-btn">
+              <i class="fas fa-search header__search-btn-icon"></i>
+            </button>
           </div>
+          <!--cart-->
+          <div class="header__cart">
+            <div class="header__cart-wrap">
+              <i class="header__cart-icon fas fa-shopping-cart"></i>
+              <span class="header__cart-notice">3</span>
+              <div class="header__cart-list "> <!--add class "header__cart-list--no-cart" khi giỏ hàng trống-->
+                <img src="assets/img/no_cart.png" alt="No_cart" class="header__cart-no-cart-img">
+                <span class="header__cart-list-no-cart-msg">
+                  Chưa có sản phẩm
+                </span>
+                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                <ul class="header__cart-list-item">
+                  <li class="header__cart-list-item">
+                    <img src="https://img.abaha.vn/photos/resized/320x/83-1596776828-myphamohui-lgvina.png" alt="img" class="header__cart-img">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            </div>
         </div>
       </div>        
     </header>
@@ -167,9 +212,9 @@
 
     <!--MODAL LAYOUT-->
     <!--xóa style nếu có javascript-->
-    <div class="modal">
+    <div class="modal" style="display: none;">
       <div class="modal__overlay"></div>
-      <div class="modal__body" style="display: flex;">
+      <div class="modal__body">
           <!--REGISTER FORM-->
             <div class="auth-form"> 
               <div class="auth-form__container">
