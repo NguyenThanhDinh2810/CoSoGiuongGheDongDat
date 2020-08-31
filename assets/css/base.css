@@ -163,6 +163,7 @@ html {
   border-radius: 2px;
   background-color: var(--white-color);
   display: none;
+  z-index: 1;
 }
 .select-input__link {
   font-size: 1.4rem;
@@ -174,4 +175,38 @@ html {
 }
 .select-input__link:hover {
   color: var(--main-color);
+}
+
+/*pagination:dãy phân số trang*/
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.pagination-item {
+  margin: 0 16px;
+}
+.pagination-item--active {
+  background-color: var(--main-color);
+  color: var(--white-color) !important;
+}
+.pagination-item--active .pagination-item__link {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+.pagination-item--active .pagination-item__link:hover {
+  background-color: #ed5c3f;
+}
+.pagination-item__link {
+  --height: 30px;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #939393;
+  min-width: 40px;
+  height: var(--height);
+  line-height: var(--height);
+  text-align: center;
+  border-radius: 2px;
 }
