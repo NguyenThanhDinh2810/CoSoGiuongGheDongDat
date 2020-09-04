@@ -18,16 +18,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/grid.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
 
   <body>
 
     <!--HEADER-->
     <header class="header">
-      <div class="grid">
+      <div class="grid wide">
         <!--navigation bar-->
-        <nav class="header__navbar">
+        <nav class="header__navbar hide-on-mobile-tablet">
           <!--left-->
           <ul class="header__navbar-list">
             <li
@@ -285,7 +287,7 @@
 
     <!--MAIN BODY-->
     <div class="app_container">
-      <div class="grid">
+      <div class="grid wide">
         <div class="grid__row app__content">
           <div class="grid__column-2">
            <nav class="category">
@@ -309,7 +311,7 @@
    
           <div class="grid__column-10">
             <!--filter + sort-->
-            <div class="home-filter">
+            <div class="home-filter hide-on-mobile-tablet">
 
               <span class="home-filter__label">Sắp xếp theo</span>
               <button class="home-filter__btn btn">Phổ biến</button>
@@ -751,7 +753,7 @@
                   <i class="pagination-item-icon fas fa-angle-left"></i>
                 </a>
               </li>
-              <li class="pagination-item">
+              <li class="pagination-item pagination-item--active">
                 <a href="" class="pagination-item__link pagination-item--active">1</a>
               </li>
               <li class="pagination-item">
@@ -785,7 +787,7 @@
 
     <!--FOOTER-->
     <footer class="footer">
-      <div class="grid">
+      <div class="grid wide">
         <div class="grid__row">
           <div class="grid__column-2-4">
             <h3 class="footer__heading">chăm sóc khách hàng</h3>
@@ -976,6 +978,33 @@
             </div>
           </div>
       </div>
+    </div>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v8.0'
+        });
+      };
+
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="113336110494972"
+theme_color="#0084ff"
+logged_in_greeting="Xin chào, chúng tôi có thể giúp gì cho bạn?"
+logged_out_greeting="Xin chào, chúng tôi có thể giúp gì cho bạn?">
     </div>
   </body>
   
